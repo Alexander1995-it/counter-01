@@ -1,0 +1,7 @@
+.app_counter__block {
+    width: 300px;
+    display: inline-block;
+    padding: 20px;
+    background-color: slateblue;
+    border-radius: 20px;
+}

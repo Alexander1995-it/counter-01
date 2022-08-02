@@ -1,0 +1,12 @@
+.button {
+    width: 80px;
+    height: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: BlinkMacSystemFont;
+    border: none;
+    background-color: aqua;
+    cursor: pointer;
+    border-radius: 10px;
+
+}

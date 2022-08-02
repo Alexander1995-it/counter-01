@@ -1,0 +1,9 @@
+.input__style {
+    width: 150px;
+    height: 20px;
+    background-color: cornflowerblue;
+}
+
+.error {
+    background-color: red;
+}

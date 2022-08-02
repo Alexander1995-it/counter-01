@@ -1,0 +1,41 @@
+
+.counter_setting__block {
+    width: 300px;
+    display: inline-block;
+    padding: 20px;
+    background-color: slateblue;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+.counter_setting__display {
+    margin-bottom: 10px;
+    border: 2px solid white;
+    border-radius: 20px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title_value {
+    color: white;
+    font-size: 20px;
+    font-family: BlinkMacSystemFont;
+}
+
+.counter_setting__button {
+    background-color: ivory;
+    border-radius: 10px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.inputt {
+width: 1000px;
+}
+
