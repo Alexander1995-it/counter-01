@@ -24,6 +24,7 @@ const CounterSetting = (props: CounterSettingPropsType) => {
 
 
     const maxValueHandler = (e: ChangeEvent<HTMLInputElement>) => {
+
         setLocalValue({...localValue, maxCounter: +(e.currentTarget.value)})
         props.setErrorDisplay(false)
         props.setDisplayEnter("enter values and press 'set'")
@@ -31,7 +32,10 @@ const CounterSetting = (props: CounterSettingPropsType) => {
 
     }
     const startValueHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        setLocalValue({...localValue, startCount: +(e.currentTarget.value)})
+        setLocalValue({
+            ...localValue,
+            startCount: +(e.currentTarget.value)
+        })
         props.setErrorDisplay(false)
         props.setDisplayEnter("enter values and press 'set'")
         setDisabledButtonSetting(false)
@@ -62,14 +66,15 @@ const CounterSetting = (props: CounterSettingPropsType) => {
     //
     // }
 
+
     return (
         <div className={s.counter_setting__block}>
             <div className={s.counter_setting__display}>
                 <div>
                     <span className={s.title_value}>Max value</span>
                     <MyInput
+                        type={"number"}
                         onChange={maxValueHandler}
-                        type={'number'}
                         value={localValue.maxCounter}
                         errorInput={errorInputMaxValue}
                     />
@@ -78,8 +83,8 @@ const CounterSetting = (props: CounterSettingPropsType) => {
                 <div>
                     <span className={s.title_value}>Start value</span>
                     <MyInput
+                        type={"number"}
                         onChange={startValueHandler}
-                        type={'number'}
                         value={localValue.startCount}
                         errorInput={errorInputStartValue}
                     />

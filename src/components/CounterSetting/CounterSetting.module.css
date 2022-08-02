@@ -5,7 +5,7 @@
     padding: 20px;
     background-color: slateblue;
     border-radius: 20px;
-    margin-right: 20px;
+    margin-top: 20px;
 }
 
 .counter_setting__display {
@@ -35,7 +35,4 @@
 
 }
 
-.inputt {
-width: 1000px;
-}
 
