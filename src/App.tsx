@@ -16,9 +16,23 @@ function App() {
         setMaxCounter(maxCounter)
         setCounter(startCounter)
         setDisplayEnter('')
+        sessionStorage.setItem('startCounter', JSON.stringify(startCounter))
+        sessionStorage.setItem('maxCounter', JSON.stringify(maxCounter))
     }
 
-
+    const getLocalStorage = () => {
+        let startCounter = sessionStorage.getItem('startCounter')
+        let maxCounter = sessionStorage.getItem('maxCounter')
+        if (startCounter) {
+            let newStartCounter = JSON.parse(startCounter)
+            setStartCounter(newStartCounter)
+            setCounter(newStartCounter)
+        }
+        if (maxCounter) {
+            let newMaxCounter = JSON.parse(maxCounter)
+            setMaxCounter (newMaxCounter)
+        }
+    }
 
     return (
         <div className="App">
@@ -39,7 +53,9 @@ function App() {
                 errorDisplay={errorDisplay}
                 displayEnter={displayEnter}
             />
-
+            <button onClick={getLocalStorage}>GET LOCAL STORAGE</button>
+            <div>startCounter: {startCounter}</div>
+            <div>maxCounter: {maxCounter}</div>
         </div>
     );
 }
